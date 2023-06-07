@@ -1,0 +1,42 @@
+$primary-color : #fff;
+$success-color: #0f0;
+$danger-color: #f00;
+$grey-color: #afafaf;
+
+// kalau bisa pakai module untuk css
+
+.container {
+    display: flex;
+    width: 300px;
+    flex-direction: row;
+    margin: auto;
+    text-align: center;
+}
+
+.digitContainer {
+    padding: 1px;
+    margin: 1;
+}
+.digit {
+    background: #000;
+    color: $primary-color;
+    box-shadow: 1px 0px 2px 0px $grey-color;
+}
+
+.buttonGroup {
+    margin: auto;
+    width: 105px;
+}
+
+.buttonContainer {
+    width: 50px;
+    float: left;
+}
+
+.button {
+    padding: 1px;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
