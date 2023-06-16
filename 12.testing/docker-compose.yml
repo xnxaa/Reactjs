@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  app:
+    image: react-fe-bootcamp:1.0.0-dev
+    build: 
+      context: .
+      dockerfile: dockerfile
+    ports:
+    - 3000:3000
+    volumes:
+    - ./:/app
+  #  entrypoint: ["npm"]
+  #  command: start
