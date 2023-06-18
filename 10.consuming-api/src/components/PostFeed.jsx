@@ -1,10 +1,11 @@
-import { Avatar, Button, ButtonGroup, Card, CardContent, Grid, TextField, Typography } from '@mui/material'
-import {useContext ,useState} from 'react'
+import { Avatar, Button, ButtonGroup, Card, CardContent, Grid, Typography, TextField, Modal, Box } from "@mui/material"
+import { useContext, useState } from "react"
 import TimeAgo from "timeago-react"
-import { PostContext } from '../context/post-context'
+import { PostContext } from "../context/post-context"
 
-export const PostFeed = ({ post, handleDeleteModal }) => {
-    const [_post, setPost] = useState(post);
+
+export const PostFeed = ({post, handleDeleteModal}) => {
+    const [_post, setPost] = useState(post)
     const {updatePosts} = useContext(PostContext);
     const [editStatus, setEditStatus] = useState(false)
     const handleEditChange = ({ target: {value} }) => {
@@ -19,24 +20,25 @@ export const PostFeed = ({ post, handleDeleteModal }) => {
         setEditStatus(false);
     }
 
-    return <Card key={`post-${post.created}`}style={{marginBottom:20 }}>
-        <CardContent style={{ textAlign: "left"}}>
+    return <Card key={`post-${post.created}`} style={{marginBottom:20}}>
+    <CardContent style={{textAlign: "left"}}>
         <Grid container>
             <Grid xl={1}>
-                <Avatar alt={post.user.name} src={post.user.picture}/>
+                <Avatar alt={post.user.name} src={post.user.picture} />
             </Grid>
             <Grid xl={7}>
-            <Typography>{post.user.name}</Typography>
+                <Typography>{post.user.name}</Typography>
             </Grid>
-            <Grid xl={4} style={{textAlign: 'right'}}>
-            <Typography>
-            <TimeAgo
+            <Grid xl={4} style={{textAlign: "right"}}>
+                <Typography>
+                <TimeAgo
                 datetime={post.created}
-                locale='id_ID'/>
-            </Typography>
+                locale='id_ID'
+                />    
+                </Typography>
+            </Grid>
         </Grid>
-    </Grid>
-    {
+        {
         !editStatus && post.post
     }
     {
@@ -45,12 +47,13 @@ export const PostFeed = ({ post, handleDeleteModal }) => {
         <Button onClick={handleSubmitUpdate}>Submit</Button>
         </>
     }
-</CardContent>
-<div style={{ textAlign: 'right', padding:20}}>
+        {/* {post.post} */}
+    </CardContent>
+    <div style={{textAlign: "right", padding: 20}}>
     <ButtonGroup>
-    <Button onclick={() => setEditStatus(!editStatus)}>Edit</Button>
-    <Button color="error" onClick={() => handleDeleteModal(post.id)}>Delete</Button>
+        <Button onClick={() => setEditStatus(!editStatus)}>Edit</Button>
+        <Button color="error" onClick={() => handleDeleteModal(post.id)}>Delete</Button>
     </ButtonGroup>
-</div>
+    </div>
 </Card>
 }

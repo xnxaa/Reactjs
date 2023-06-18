@@ -1,19 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import { ButtonGoogle } from './components/ButtonGoogle';
-import { HomePage} from './pages/home-page/HomePage';
+import { HomePage } from './pages/home-page/HomePage';
 import { LoginPage } from './pages/login-page/LoginPage';
+import './App.css';
+import { PostContextProvider } from './context/post-context';
+// import { ButtonGoogle } from './components/ButtonGoogle';
 
 function App() {
   return (
     <div className="App">
 
- <Routes>
+    <Routes>
     <Route path='/home'  element={<HomePage/>}/>
     <Route path='/login'  element={<LoginPage/>}/>
     <Route path='/'  element={<LoginPage/>}/>
     </Routes>
-     
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { Avatar, Button, ButtonGroup, Card, CardContent, Grid, Typography, Modal, Box } from "@mui/material"
 import { useContext, useState } from "react"
 import TimeAgo from "timeago-react"
-import { PostContext } from "../context/post-context";
+import { PostContext } from "../context/post-context"
 import { PostFeed } from "./PostFeed";
 
 const style ={
@@ -22,31 +22,33 @@ export const Feed = () => {
     const [id, setId] = useState(false)
     const handleDeleteModal = (id) => {
         setId(id)
-        setOpen(true)
-    }
-    const handleDelete = async () => {
-        await deletePosts(id)
-        setOpen(false)
-    }
+         setOpen(true)
+     }
+
+     const handleDelete = async () => {
+                 await deletePosts(id)
+                 setOpen(false)
+             }
+
     return <div>
         <Modal open={open}>
-            <Box sx={style}>
-                <Typography id="modal-modal-title" variant="h6" component="h2">
-                    Are you sure?
-                </Typography>
-                <Typography id="modal-modal-description" sx={{ mt:2 }}>
-                    this action cannot be rolled back
-                </Typography>
-                <ButtonGroup>
-                    <Button onClick={handleDelete}>Yes</Button>
-                    <Button color="error" onClick={() => setOpen(false)}>No</Button>
-                </ButtonGroup>
-            </Box>
-        </Modal>
-        {
+        <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+                Are you sure?
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt:2 }}>
+                this action cannot be rolled back
+            </Typography>
+            <ButtonGroup>
+                <Button onClick={handleDelete}>Yes</Button>
+                <Button color="error" onClick={() => setOpen(false)}>No</Button>
+            </ButtonGroup>
+        </Box>
+    </Modal>
+ {
             posts.map((post) => (
-                <PostFeed post={post} handleDeleteModal={handleDeleteModal} />
+                 <PostFeed post={post} handleDeleteModal={handleDeleteModal}/>   
             ))
         }
-</div>
+    </div>
 }

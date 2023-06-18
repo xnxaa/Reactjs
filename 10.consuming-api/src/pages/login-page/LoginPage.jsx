@@ -8,9 +8,11 @@ export const LoginPage = () => {
     const navigate = useNavigate()
     useEffect(() => {
         credentials && navigate('/home')
-    }, credentials)
+    }, [credentials])
+
+
     return <div style={{textAlign: 'center'}}>
-        <h1>Login Page</h1>
-        <ButtonGoogle/>
-    </div>
+    <h1>Login Page</h1>
+    <ButtonGoogle/>
+    </div> 
 }

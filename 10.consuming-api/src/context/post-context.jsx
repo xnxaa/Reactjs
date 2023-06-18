@@ -1,6 +1,6 @@
 import {createContext, useEffect, useState} from 'react'
 import { usePostService } from '../services/post'
-// import { useLocalStorage } from '../hooks/localStorage'
+import { useLocalStorage } from '../hooks/localStorage'
 
 export const PostContext = createContext()
 
@@ -24,6 +24,7 @@ export const PostContextProvider = ({ children }) => {
     }
 
     useEffect(() => {
+       // credentials && fetchPosts().then()
         fetchPosts().then()
     }, [])
 
@@ -37,3 +38,6 @@ export const PostContextProvider = ({ children }) => {
         { children }
     </PostContext.Provider>
 }
+
+
+ 

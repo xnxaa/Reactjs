@@ -2,28 +2,28 @@ import useClient, {prefix} from "../rest-client"
 import {useState} from "react"
 
 export const usePostService = () => {
-    const collection =`${prefix}_post`
+    const collection =`${prefix}_posts`
     const client = useClient()
     const [loading, setLoading] = useState(false)
 
     const getPosts = async () => {
         if(loading) return
-        setLoading(true)
-        return client.get(collection,{
-            params: {
+            setLoading(true)
+            return client.get(collection,{
+                params: {
                 sort: '-timestamp'
             }
         }).then((response) => {
-                return response.data
-            }).finally(() => {
-            setLoading(false)
-        })
-    }
+                    return response.data
+                }).finally(() => {
+                setLoading(false)
+            })
+        }
 
     const createPosts =  async (post, user) => {
         if(loading) return
         setLoading(true)
-        return client.post(collection, {post, timestamp: new Date(), user}).then((response) => {
+        return client.post(collection, {post, timestamp: new Date(), user }).then((response) => {
             return response.data
         }).finally(() => {
             setLoading(false)
@@ -49,5 +49,9 @@ export const usePostService = () => {
             setLoading(false)
         })
     }
-    return {getPosts, createPosts, deletePosts, updatePosts, loading}
+
+    return { getPosts, createPosts, deletePosts, updatePosts, loading}
 }
+
+export default usePostService
+
