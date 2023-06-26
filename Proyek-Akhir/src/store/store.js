@@ -3,14 +3,15 @@ import thunkMiddleware from 'redux-thunk';
 import authReducer from './authReducers';
 import contactReducer from './contactReducer';
 import regisFormReducer from './RegisFormSlice';
+import { produkReducer } from './ProdukReducers'; 
 
 const rootReducer = combineReducers({
   auth: authReducer,
   contact: contactReducer,
   regisForm: regisFormReducer,
+  produk: produkReducer,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
 export default store;
-  

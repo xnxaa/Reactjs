@@ -64,17 +64,17 @@ const Contact = ({ contactInfo, updateContactInfo }) => {
 
       <StyledCardWrapper>
         <StyledContactCard style={{ marginTop: 50, marginBottom: 200 }}>
-          <div onClick={handleGmailClick}>
+          <div data-testid="gmail-button" onClick={handleGmailClick}>
             <StyledIcon>
               <Email fontSize="large" style={{ color: '#fff' }} />
             </StyledIcon>
           </div>
-          <div onClick={handleInstagramClick}>
+          <div data-testid="instagram-button" onClick={handleInstagramClick}>
             <StyledIcon>
               <Instagram fontSize="large" style={{ color: '#fff' }} />
             </StyledIcon>
           </div>
-          <div onClick={handlePhoneClick}>
+          <div data-testid="phone-button" onClick={handlePhoneClick}>
             <StyledIcon>
               <Phone fontSize="large" style={{ color: '#fff' }} />
             </StyledIcon>

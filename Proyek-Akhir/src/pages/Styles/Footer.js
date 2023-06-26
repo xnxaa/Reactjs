@@ -6,7 +6,6 @@ const Footer = () => {
     <Container sx={{ textAlign: 'center', py: 4, bgcolor: '#f5f5f5' }} maxWidth="xl">
       <Grid container justifyContent="space-between" alignItems="center">
         <Grid item xs={12} sm={6} sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
-          <img src="/path/to/logo.png" alt="Logo" height={30} marginLeft={15} />
           <Typography variant="h6" sx={{ my: 1, marginLeft:5 }}>
             ELECSOLUTIONS
           </Typography>

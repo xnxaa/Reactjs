@@ -8,7 +8,7 @@ const RegisterSuccess = () => {
   const navigate = useNavigate();
 
   const handleHomeClick = () => {
-    navigate('/coba');
+    navigate('/home');
   };
 
   return (

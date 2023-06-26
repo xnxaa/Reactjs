@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const NavbarLogin = () => {
   const navigate = useNavigate();
   const handleBack = () => {
-    navigate(-1);
+    navigate('/');
   };
 
   return (

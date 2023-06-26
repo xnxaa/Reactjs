@@ -17,13 +17,13 @@ export const ButtonGoogle = () => {
   
     useEffect(() => {
       if (credential) {
-        navigate('/coba'); // Arahkan ke halaman "Coba" setelah login berhasil
+        navigate('/home');
       }
     }, [credential, navigate]);
   
     const handleLogout = () => {
-      setCredentialStorage(null); // Menghapus kredensial dari penyimpanan lokal
-      navigate('/login'); // Mengarahkan pengguna kembali ke halaman login
+      setCredentialStorage(null);
+      navigate('/login');
     };
   
     return (

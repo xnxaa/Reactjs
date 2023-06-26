@@ -18,13 +18,11 @@ export const LoginForm = () => {
 
   const handleLogin = () => {
     if (username === 'admin' && password === 'admin') { 
-      const newCredentials = 
-        'eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg1YmE5MzEzZmQ3YTdkNGFmYTg0ODg0YWJjYzg0MDMwMDQzNjMxODAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYmYiOjE2ODY2Njk0MDEsImF1ZCI6IjI5ODE2MDA0MDMwNC1wZ2EyY2V0OHU4MmFzcWV2MXRicmpqOWFzYXAwNjBhby5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExMjc5ODI3MzI2NzczNDMzMTcwOSIsImVtYWlsIjoidml2aW11c2Zpcm9oODNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF6cCI6IjI5ODE2MDA0MDMwNC1wZ2EyY2V0OHU4MmFzcWV2MXRicmpqOWFzYXAwNjBhby5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsIm5hbWUiOiJ2aXZpIG11c2Zpcm9oIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBY0hUdGV6WXJMVm9aUGJVVjNQVWl6SDdkX3ZrWjdCMENMMmdtc1I0VEF6ZVE9czk2LWMiLCJnaXZlbl9uYW1lIjoidml2aSIsImZhbWlseV9uYW1lIjoibXVzZmlyb2giLCJpYXQiOjE2ODY2Njk3MDEsImV4cCI6MTY4NjY3MzMwMSwianRpIjoiMmUyMWU3OGE5MjU1MWZiMTViYjYxODI4ZTc3YmRiODNlMGNhYzljMSJ9.jJNKZYr9BOOaPvG3WPwx70IXr9ckMkjs9xII0UEPHYfbmU_buW5ecG6qZGNRRypzOdruf7BR4n-RxPFAHGmAIdMEoOTg_gxqg9GaMu0459HGsG7nI9xYVdwuZxMQAa11drhqeUDVMzY2twcvE3AXxkpWUMMsxST-k2N0gZGf2VFGRJlGrU77UQ25SLe5dowhdOxdaW88Gp_Qe6oYYRkqYdzrVBrqdVZqTgXI31tF5Aaj3ALl4vpJ47XxlEbgn8uxbVP4EWU0bpssocXLiLe2CVv_5HyZ49mH1yfogRJpdCrKsGjgEsCJFKCtfyWhOq7TjVQoIVdl9rn28IsEmJ8WOg'
-        // username: 'admin',
-        // password: 'admin',
-        // googleClientId: '298160040304-pga2cet8u82asqev1tbrjj9asap060ao.apps.googleusercontent.com'
-      ;
-      setCredentials(newCredentials);
+      // const newCredentials = 
+      //   'eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg1YmE5MzEzZmQ3YTdkNGFmYTg0ODg0YWJjYzg0MDMwMDQzNjMxODAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYmYiOjE2ODY2Njk0MDEsImF1ZCI6IjI5ODE2MDA0MDMwNC1wZ2EyY2V0OHU4MmFzcWV2MXRicmpqOWFzYXAwNjBhby5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExMjc5ODI3MzI2NzczNDMzMTcwOSIsImVtYWlsIjoidml2aW11c2Zpcm9oODNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF6cCI6IjI5ODE2MDA0MDMwNC1wZ2EyY2V0OHU4MmFzcWV2MXRicmpqOWFzYXAwNjBhby5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsIm5hbWUiOiJ2aXZpIG11c2Zpcm9oIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBY0hUdGV6WXJMVm9aUGJVVjNQVWl6SDdkX3ZrWjdCMENMMmdtc1I0VEF6ZVE9czk2LWMiLCJnaXZlbl9uYW1lIjoidml2aSIsImZhbWlseV9uYW1lIjoibXVzZmlyb2giLCJpYXQiOjE2ODY2Njk3MDEsImV4cCI6MTY4NjY3MzMwMSwianRpIjoiMmUyMWU3OGE5MjU1MWZiMTViYjYxODI4ZTc3YmRiODNlMGNhYzljMSJ9.jJNKZYr9BOOaPvG3WPwx70IXr9ckMkjs9xII0UEPHYfbmU_buW5ecG6qZGNRRypzOdruf7BR4n-RxPFAHGmAIdMEoOTg_gxqg9GaMu0459HGsG7nI9xYVdwuZxMQAa11drhqeUDVMzY2twcvE3AXxkpWUMMsxST-k2N0gZGf2VFGRJlGrU77UQ25SLe5dowhdOxdaW88Gp_Qe6oYYRkqYdzrVBrqdVZqTgXI31tF5Aaj3ALl4vpJ47XxlEbgn8uxbVP4EWU0bpssocXLiLe2CVv_5HyZ49mH1yfogRJpdCrKsGjgEsCJFKCtfyWhOq7TjVQoIVdl9rn28IsEmJ8WOg'
+
+      // ;
+      // setCredentials(newCredentials);
 
       dispatch(loginSuccess());
       navigate('/admin');
@@ -35,7 +33,7 @@ export const LoginForm = () => {
 
   useEffect(() => {
     if (credentials && isAuthenticated) {
-      navigate('/coba');
+      navigate('/home');
     }
   }, [credentials, isAuthenticated, navigate]);
   
