@@ -8,7 +8,10 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import {GoogleOAuthProvider} from "@react-oauth/google"
 import config from "../src/config/index";
-import { RegisContextProvider } from './pages/context/regis-context';
+import { RegisContextProvider } from './pages/context/regis-context'; 
+import 'matchmedia-polyfill';
+import 'matchmedia-polyfill/matchMedia.addListener';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

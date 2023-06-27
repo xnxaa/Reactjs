@@ -26,9 +26,8 @@ export const redirectToLogin = () => {
   };
 };
 
-//sinkronkan lagi dengan punya yang lain
+
 export const logout = (navigate) => {
-  // Menghapus kredensial dari penyimpanan lokal
   localStorage.removeItem('credential'); //login google
   localStorage.removeItem('credentials'); //admin
 

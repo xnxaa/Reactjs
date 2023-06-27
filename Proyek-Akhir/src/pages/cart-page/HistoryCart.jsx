@@ -21,8 +21,8 @@ const HistoryCart = () => {
       <div style={{ display: 'flex' }}>
         <NavbarLink />
         <div style={{ margin: 'auto' }}>
-          <Typography marginTop={10}>
-            <h1>Riwayat Pesanan</h1>
+          <Typography variant='h4' marginTop={10}>
+            Riwayat Pesanan
           </Typography>
           {carts && carts.length === 0 ? (
             <Typography marginTop={3}>Tidak ada pesanan yang sedang diproses.</Typography>
@@ -37,9 +37,6 @@ const HistoryCart = () => {
                           <Typography variant="h5" component="div" align="left">
                             {cart.name}
                           </Typography>
-                          {/* <Typography variant="body1" color="text.secondary" align="left" style={{ marginTop: '5px' }}>
-                            Product: {cart.name}
-                          </Typography> */}
                           <Typography variant="body1" color="text.secondary" align="left" style={{ marginTop: '5px' }}>
                             Price: {cart.price}
                           </Typography>

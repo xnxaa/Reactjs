@@ -7,6 +7,7 @@ import Navbar from '../Styles/NavbarHome';
 import NavbarLink from '../Styles/NavbarLink';
 import usePostService from '../rest-client/post-cart';
 
+
 const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -45,14 +46,15 @@ const Cart = () => {
       console.error('Failed to place orders:', error);
     }
   };
+
   return (
     <div>
       <Navbar />
       <div style={{ display: 'flex' }}>
         <NavbarLink />
         <div style={{ margin: 'auto' }}>
-          <Typography marginTop={10}>
-            <h1>Keranjang Pesanan</h1>
+          <Typography marginTop={10} variant="h5" component="div">
+            Keranjang Pesanan
           </Typography>
           {cart.length === 0 ? (
             <div>
@@ -79,7 +81,7 @@ const Cart = () => {
                     </div>
                     <CardContent style={{ flexGrow: 1, marginLeft: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div>
-                        <Typography variant="h5" component="div" align='left'>
+                        <Typography variant="h5" component="div" align="left">
                           {item.name}
                         </Typography>
                         <Typography variant="body1" color="text.secondary" align="left" style={{ marginTop: '5px' }}>

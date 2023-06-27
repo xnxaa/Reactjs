@@ -2,9 +2,9 @@ import {createContext, useEffect, useState} from 'react'
 import { usePostService } from '../rest-client/post'
 
 
-export const RegisContext = createContext()
+export const AdminContext = createContext()
 
-export const RegisContextProvider = ({ children }) => {
+export const AdminContextProvider = ({ children }) => {
     const { getData} = usePostService()
     const [posts, setPosts] = useState([])
     const fetchPosts = async () => {
@@ -17,11 +17,11 @@ export const RegisContextProvider = ({ children }) => {
         fetchPosts().then()
     }, [])
 
-    return <RegisContext.Provider value={
+    return <AdminContext.Provider value={
         {
             posts, 
             fetchPosts}
             }>
         { children }
-    </RegisContext.Provider>
+    </AdminContext.Provider>
 }

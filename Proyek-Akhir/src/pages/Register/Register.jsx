@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Grid, Typography } from "@mui/material";
 import { RegisForm } from "./RegisForm";
-import NavbarLogin from "../Styles/NavbarLogin";
+import NavbarHome from "../Styles/NavbarHome";
 import { useSelector, useDispatch } from "react-redux";
 import { resetForm } from "../../store/RegisFormSlice";
 
@@ -16,7 +16,7 @@ export const Register = () => {
 
   return (
     <div>
-        <NavbarLogin/>
+        <NavbarHome/>
         <Typography marginTop={10}>
       <h1>Halaman Registrasi Teknisi</h1>
       </Typography>
