@@ -7,7 +7,6 @@ import Navbar from '../Styles/NavbarHome';
 import NavbarLink from '../Styles/NavbarLink';
 import usePostService from '../rest-client/post-cart';
 
-
 const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -33,28 +32,27 @@ const Cart = () => {
       name: item.name,
       price: item.harga,
     }));
-  
+
     try {
       for (const order of orders) {
         await createCart(order.name, order.price);
         dispatch(addToCart(order));
       }
-  
+
       dispatch(clearCart());
       navigate('/cart-success', { state: { orders } });
     } catch (error) {
       console.error('Failed to place orders:', error);
     }
   };
-
   return (
     <div>
       <Navbar />
       <div style={{ display: 'flex' }}>
         <NavbarLink />
         <div style={{ margin: 'auto' }}>
-          <Typography marginTop={10} variant="h5" component="div">
-            Keranjang Pesanan
+          <Typography marginTop={10}>
+            <h1>Keranjang Pesanan</h1>
           </Typography>
           {cart.length === 0 ? (
             <div>
@@ -81,7 +79,7 @@ const Cart = () => {
                     </div>
                     <CardContent style={{ flexGrow: 1, marginLeft: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div>
-                        <Typography variant="h5" component="div" align="left">
+                        <Typography variant="h5" component="div" align='left'>
                           {item.name}
                         </Typography>
                         <Typography variant="body1" color="text.secondary" align="left" style={{ marginTop: '5px' }}>
@@ -103,7 +101,7 @@ const Cart = () => {
               </Button>
             </div>
           )}
-        </div>  
+        </div>
       </div>
       <Grid marginBottom={79}></Grid>
     </div>

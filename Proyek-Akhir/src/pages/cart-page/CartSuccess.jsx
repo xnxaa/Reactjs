@@ -7,18 +7,14 @@ import { Typography } from '@mui/material';
 const CartSuccess = () => {
   return (
     <div>
-      <Navbar />
-      <Typography marginTop={10} variant="h4" component="div">
-        Pesanan Berhasil Ditempatkan
+      <Navbar/>
+      <Typography marginTop={10}>
+      <h2>Pesanan Berhasil Ditempatkan</h2>
       </Typography>
-      <Typography variant="body1">
-        Pesanan Anda telah berhasil ditempatkan. Mohon tunggu teknisi tiba di lokasi Anda.
-      </Typography>
+      <p>Pesanan Anda telah berhasil ditempatkan. Mohon tunggu teknisi tiba di lokasi Anda.</p>
       <img src="../../images/cart-success.jpg" alt="Success" style={{ width: '400px', marginTop: '50px', borderRadius: '50%' }} />
       <div>
-        <Button component={Link} to="/service1" variant="contained" style={{ marginTop: '50px', marginBottom: '50px' }}>
-          Lanjutkan Belanja
-        </Button>
+      <Button component={Link} to="/service1" variant="contained" style={{ marginTop: '50px', marginBottom: '50px' }}>Lanjutkan Belanja</Button>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ const HistoryCart = () => {
       <div style={{ display: 'flex' }}>
         <NavbarLink />
         <div style={{ margin: 'auto' }}>
-          <Typography variant='h4' marginTop={10}>
+          <Typography variant="h4" marginTop={10}>
             Riwayat Pesanan
           </Typography>
           {carts && carts.length === 0 ? (

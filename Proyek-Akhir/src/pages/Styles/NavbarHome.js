@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate, Router } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Menu, MenuItem } from '@mui/material';
 import { AccountCircleRounded } from '@mui/icons-material';
 import { logout } from '../../store/actions';
@@ -16,7 +16,6 @@ const Navbar = () => {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
-
 
   const handleServiceMenuOpen = (event) => {
     setServiceAnchorEl(event.currentTarget);

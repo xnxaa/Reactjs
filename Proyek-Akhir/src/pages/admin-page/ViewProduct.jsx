@@ -12,7 +12,7 @@ const ViewProduct = () => {
       <NavbarLogin />
       <div style={{ textAlign: 'center' }}>
         <Typography marginTop={10} align="center">
-          <h1>Halaman Registrasi Teknisi</h1>
+          <h1>Halaman Admin</h1>
         </Typography>
         <Card sx={{ width: 500, marginBottom: 10 }}>
           <CardContent>

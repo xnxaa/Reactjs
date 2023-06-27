@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from "./pages/Home/Home";
 import Footer from './pages/Styles/Footer';
-import LoginForm from './pages/Login/LoginForm';
+import LoginForm from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import RegisterRead from './pages/Register/RegisterRead';
 import RegisterSuccess from './pages/Register/RegisterSuccess';
@@ -14,8 +14,7 @@ import Service3 from './pages/services-page/Service3';
 import Cart from './pages/cart-page/Cart';
 import CartSuccess from './pages/cart-page/CartSuccess';
 import HistoryCart from './pages/cart-page/HistoryCart';
-import ViewProduct from './pages/admin-page/ViewProduct';
-// import ProductList from './pages/admin-page/AddProduct';
+
 
 function App() {
   return (
@@ -34,9 +33,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/cart-success" element={<CartSuccess />} />
         <Route path="/history-cart" element={<HistoryCart />} />
-        <Route path="/admin" element={<ViewProduct />} />
-        {/* <Route path="/addProduct" element={<ProductList />} /> */}
-        <Route path="/ViewProduct" element={<ViewProduct />} />
+
 
 
         <Route path="*" element={<NotFound />} />

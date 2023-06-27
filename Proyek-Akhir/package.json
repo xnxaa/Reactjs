@@ -12,8 +12,9 @@
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.4.0",
     "date-and-time": "^3.0.2",
+    "history": "^5.3.0",
+    "matchmedia-polyfill": "^0.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-jwt": "^1.2.0",
@@ -54,11 +55,21 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "@testing-library/react": "^14.0.0",
+    "axios": "^1.4.0",
+    "axios-mock-adapter": "^1.21.5",
+    "babel-jest": "^29.5.0",
     "jest": "^27.5.1",
     "react-redux": "^8.1.1",
     "redux": "^4.2.1",
     "redux-mock-store": "^1.5.4"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!axios)/"
+    ]
   }
 }

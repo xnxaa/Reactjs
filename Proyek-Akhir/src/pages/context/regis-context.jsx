@@ -5,10 +5,10 @@ import { usePostService } from '../rest-client/post'
 export const RegisContext = createContext()
 
 export const RegisContextProvider = ({ children }) => {
-    const { getData} = usePostService()
+    const { getPosts} = usePostService()
     const [posts, setPosts] = useState([])
     const fetchPosts = async () => {
-        const _posts = await getData()
+        const _posts = await getPosts()
         setPosts(_posts)
     }
 

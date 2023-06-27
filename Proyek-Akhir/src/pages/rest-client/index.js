@@ -13,4 +13,4 @@ export const useClient = () => {
     return client;
 }
 
-export default useClient
+export default useClient;

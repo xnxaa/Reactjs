@@ -106,7 +106,7 @@ const Service1 = () => {
                   {selectedProduct.name}
                 </Typography>
                 <img
-                  src={require(`../../components/product/${selectedProduct.image}`).default}
+                  src={require(`../../components/product/${selectedProduct.image}`)}
                   alt={selectedProduct.name}
                   style={{ width: '100%', height: '300px', marginTop: '10px' }}
                 />

@@ -6,7 +6,7 @@ export const usePostService = () => {
     const client = useClient()
     const [loading, setLoading] = useState(false)
 
-    const getData = async () => {
+    const getPosts = async () => {
         if(loading) return
             setLoading(true)
             return client.get(collection,{
@@ -33,7 +33,7 @@ export const usePostService = () => {
               });
           };
 
-    return { getData, createPosts, loading}
+    return { getPosts, createPosts, loading}
 }
 
 export default usePostService
